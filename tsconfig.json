@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext", 
+    "moduleResolution": "NodeNext", // Revert back to NodeNext
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true, // Add this to potentially bypass library type checking issues
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": true,
+    "sourceMap": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
