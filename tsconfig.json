@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext", 
+    "module": "NodeNext",
     "moduleResolution": "NodeNext", // Revert back to NodeNext
     "esModuleInterop": true,
     "strict": true,

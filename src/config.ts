@@ -30,7 +30,7 @@ export const validateConfig = (): boolean => {
     'facebookAccessToken',
     'facebookAccountId',
   ];
-  
+
   for (const key of requiredVars) {
     if (!config[key]) {
       console.error(`Chybějící konfigurační proměnná: ${key.toUpperCase()}`);
@@ -46,7 +46,7 @@ export const initFacebookSdk = () => {
     throw new Error('Nelze inicializovat Facebook SDK: Chybí konfigurace.');
   }
   // We know these are defined because validateConfig passed
-  FacebookAdsApi.init(config.facebookAccessToken!); 
+  FacebookAdsApi.init(config.facebookAccessToken!);
   // Optional: Set a default AdAccount instance if needed frequently
   // const account = new AdAccount(config.facebookAccountId!);
   // console.log('Facebook SDK inicializováno pro účet:', config.facebookAccountId);
