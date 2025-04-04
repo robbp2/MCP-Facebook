@@ -1,57 +1,57 @@
 # Facebook Ads MCP Server
 
-MCP (Model Context Protocol) server pro zadávání a vyhodnocování reklamních kampaní na Facebooku s využitím Claude AI.
+MCP (Model Context Protocol) server for inputting and evaluating Facebook ad campaigns using Claude AI.
 
-## Popis
+## Description
 
-Tento MCP server poskytuje rozhraní pro komunikaci s Facebook Marketing API pomocí protokolu MCP. Umožňuje Claude AI a dalším LLM modelům pracovat s Facebook reklamami – vytvářet a spravovat kampaně, analyzovat výsledky a optimalizovat výkon.
+This MCP server provides an interface for communicating with the Facebook Marketing API via the MCP protocol. It allows Claude AI and other LLM models to work with Facebook ads – create and manage campaigns, analyze results, and optimize performance.
 
-## Funkce
+## Features
 
-- **Správa reklamních kampaní**
-  - Vytváření nových kampaní
-  - Získání seznamu existujících kampaní
-  - Úprava parametrů kampaní
-  - Odstranění kampaní
+- **Campaign Management**
+  - Creating new campaigns
+  - Retrieving a list of existing campaigns
+  - Editing campaign parameters
+  - Deleting campaigns
 
-- **Analytika a reportování**
-  - Získání přehledu o výkonu kampaní
-  - Srovnání více kampaní
-  - Analýza účtu
-  - Demografická analýza publika
+- **Analytics and Reporting**
+  - Retrieving campaign performance overviews
+  - Comparing multiple campaigns
+  - Account analysis
+  - Audience demographic analysis
 
-- **Správa publik**
-  - Vytváření vlastních publik
-  - Vytváření lookalike publik
-  - Správa seznamů uživatelů
+- **Audience Management**
+  - Creating custom audiences
+  - Creating lookalike audiences
+  - Managing user lists
 
-- **AI asistence**
-  - Šablony promptů pro Claude AI
-  - Analýza výkonu kampaní
-  - Doporučení pro optimalizaci
+- **AI Assistance**
+  - Prompt templates for Claude AI
+  - Campaign performance analysis
+  - Optimization recommendations
 
-## Požadavky
+## Requirements
 
-- Node.js (verze 18 nebo vyšší)
-- Facebook Business Manager účet
-- Facebook App s přístupem k Marketing API
-- Přístupový token s oprávněními pro Facebook Ads API
-- Claude AI nebo jiný LLM s podporou MCP
+- Node.js (version 18 or higher)
+- Facebook Business Manager account
+- Facebook App with access to the Marketing API
+- Access token with permissions for the Facebook Ads API
+- Claude AI or another LLM supporting MCP
 
-## Instalace
+## Installation
 
-1. Klonujte repozitář:
+1. Clone the repository:
 ```bash
 git clone https://github.com/Tisik79/MCP-Facebook.git
 cd MCP-Facebook
 ```
 
-2. Nainstalujte závislosti:
-```bash
+2. Install dependencies
+```
 npm install
 ```
 
-3. Vytvořte soubor `.env` s následujícím obsahem:
+3. Create a .env file with the following content:
 ```
 FACEBOOK_APP_ID=your_app_id
 FACEBOOK_APP_SECRET=your_app_secret
@@ -60,26 +60,22 @@ FACEBOOK_ACCOUNT_ID=your_ad_account_id
 PORT=3000
 ```
 
-4. Zkompilujte TypeScript:
-```bash
+4. Compile TypeScript:
+```
 npm run build
 ```
 
-5. Spusťte server:
-```bash
+5. Start the server:
+```
 npm start
 ```
 
-## Konfigurace pro Claude Desktop
-
-Pro použití tohoto MCP serveru s Claude Desktop přidejte následující konfiguraci do konfiguračního souboru Claude Desktop:
-
-```json
-{
+Configuration for Claude Desktop
+```{
   "mcpServers": {
     "facebook-ads": {
       "command": "node",
-      "args": ["cesta/k/facebook-ads-mcp-server/dist/index.js"],
+      "args": ["path/to/facebook-ads-mcp-server/dist/index.js"],
       "env": {
         "FACEBOOK_APP_ID": "<YOUR_APP_ID>",
         "FACEBOOK_APP_SECRET": "<YOUR_APP_SECRET>",
@@ -91,37 +87,51 @@ Pro použití tohoto MCP serveru s Claude Desktop přidejte následující konfi
 }
 ```
 
-## Dostupné nástroje
+##Available Tools
 
-### Nástroje pro správu kampaní
-- `create_campaign` - Vytvoření nové reklamní kampaně
-- `get_campaigns` - Získání seznamu kampaní
-- `get_campaign_details` - Získání detailů o kampani
-- `update_campaign` - Aktualizace kampaně
-- `delete_campaign` - Odstranění kampaně
+##Campaign Management Tools
 
-### Nástroje pro analýzu a vyhodnocování
-- `get_campaign_insights` - Získání analytických dat o kampani
-- `get_account_insights` - Získání souhrnných dat o účtu
-- `compare_campaigns` - Porovnání více kampaní
-- `get_campaign_demographics` - Získání demografických údajů
+```create_campaign``` - Create a new ad campaign
 
-### Nástroje pro správu publik
-- `create_custom_audience` - Vytvoření vlastního publika
-- `get_custom_audiences` - Získání seznamu publik
-- `create_lookalike_audience` - Vytvoření lookalike publika
-- `add_users_to_custom_audience` - Přidání uživatelů do publika
+```get_campaigns``` - Retrieve a list of campaigns
 
-## Bezpečnost
+```get_campaign_details``` - Retrieve details of a campaign
 
-Tento MCP server vyžaduje přístup k vašemu Facebook Business Manager účtu prostřednictvím přístupového tokenu. Zajistěte, aby tento token byl bezpečně uložen a nebyl sdílen s neoprávněnými osobami.
+```update_campaign``` - Update a campaign
 
-Pro produkční nasazení doporučujeme:
-- Používat token s minimálními potřebnými oprávněními
-- Používat proměnné prostředí pro citlivé údaje
-- Pravidelně obnovovat přístupové tokeny
-- Implementovat další vrstvy zabezpečení (firewall, VPN)
+```delete_campaign``` - Delete a campaign
 
-## Licence
+##Analytics and Evaluation Tools
 
-Distribuováno pod licencí MIT.
+```get_campaign_insights``` - Retrieve analytical data for a campaign
+
+```get_account_insights``` - Retrieve summary data for the account
+
+```compare_campaigns``` - Compare multiple campaigns
+
+```get_campaign_demographics``` - Retrieve demographic data
+
+##Audience Management Tools
+
+```create_custom_audience``` - Create a custom audience
+
+```get_custom_audiences``` - Retrieve a list of audiences
+
+```create_lookalike_audience``` - Create a lookalike audience
+
+```add_users_to_custom_audience``` - Add users to an audience
+
+
+##Security
+
+This MCP server requires access to your Facebook Business Manager account via an access token. Ensure this token is stored securely and not shared with unauthorized individuals.
+
+For production deployment, we recommend:
+
+Using a token with minimal required permissions
+
+Using environment variables for sensitive data
+
+Regularly refreshing access tokens
+
+Implementing additional layers of security (firewall, VPN)
