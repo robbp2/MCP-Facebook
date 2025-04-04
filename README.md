@@ -87,9 +87,9 @@ Configuration for Claude Desktop
 }
 ```
 
-##Available Tools
+## Available Tools
 
-##Campaign Management Tools
+## Campaign Management Tools
 
 ```create_campaign``` - Create a new ad campaign
 
@@ -101,7 +101,7 @@ Configuration for Claude Desktop
 
 ```delete_campaign``` - Delete a campaign
 
-##Analytics and Evaluation Tools
+## Analytics and Evaluation Tools
 
 ```get_campaign_insights``` - Retrieve analytical data for a campaign
 
@@ -111,7 +111,7 @@ Configuration for Claude Desktop
 
 ```get_campaign_demographics``` - Retrieve demographic data
 
-##Audience Management Tools
+## Audience Management Tools
 
 ```create_custom_audience``` - Create a custom audience
 
@@ -122,7 +122,7 @@ Configuration for Claude Desktop
 ```add_users_to_custom_audience``` - Add users to an audience
 
 
-##Security
+## Security
 
 This MCP server requires access to your Facebook Business Manager account via an access token. Ensure this token is stored securely and not shared with unauthorized individuals.
 
